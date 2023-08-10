@@ -31,7 +31,7 @@ sudo systemctl start mariadb
 sudo systemctl enable mariadb
 sudo unlink /etc/resolv.conf
 sudo touch /etc/resolv.conf
-echo "nameserver 8.8.8.8 \nnameserver 4.2.2.4" > /etc/resolv.conf
+echo "nameserver 8.8.8.8"> /etc/resolv.conf
 sudo mysql -u root -p <<EOF
 create database zabbix_proxy character set utf8mb4 collate utf8mb4_bin;
 create user zabbix@localhost identified by 'password';
