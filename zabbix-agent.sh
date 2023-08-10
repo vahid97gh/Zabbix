@@ -9,9 +9,9 @@ fi
 apt update -y
 File=/home/ubuntu/zabbix-release_5.0-1+focal_all.deb
 if [ -f "$File"]; then
-echo "file does exist!"
+echo "file does exist!!"
 else
-echo "file does not exist!"
+echo "file does not exist!!"
 wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
 fi
 sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
