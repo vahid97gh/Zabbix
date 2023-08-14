@@ -7,14 +7,14 @@ sudo touch /etc/resolv.conf
 echo "nameserver 8.8.8.8 \nnameserver 4.2.2.4" > /etc/resolv.conf
 fi
 apt update -y
-File=/home/ubuntu/zabbix-release_5.0-1+focal_all.deb
+File=/home/ubuntu/zabbix-release_6.0-4%2Bubuntu20.04_all.deb
 if [ -f "$File"]; then
 echo "file does exist!!"
 else
 echo "file does not exist!!"
-wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4%2Bubuntu20.04_all.deb
 fi
-sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
+sudo dpkg -i zabbix-release_6.0-4%2Bubuntu20.04_all.deb
 sudo apt update
 sudo apt install zabbix-agent -y
 service_name="zabbix-agent"
