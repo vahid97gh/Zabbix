@@ -1,6 +1,6 @@
-# zabbix
+# Zabbix-agent Installation script
 bash-zabbix-agent
-This file is the installation bash code of Zabbix-agent .
+This file is the installation bash code of Zabbix-agent.
 To install the Zabbix agent you can run this bash script file in your Ubuntu server and monitor it in your main Zabbix.
 run this command:
 $ bash zabbix-agent.sh
