@@ -23,7 +23,13 @@ echo "$service_name running"
 else
 systemctl start "$service_name"
 fi
+echo "Please enter your zabbix server :"
+read x
+echo "Please enter your hostname :"
+read y
+sed -i 's/ServerActive=127.0.0.1/ServerActive=$x/' /etc/zabbix/zabbix_agentd.conf
+sed -i 's/Server=127.0.0.1/Server=$x/' /etc/zabbix/zabbix_agentd.conf
 sed -i 's/LogFileSize=0/LogFileSize=1/' /etc/zabbix/zabbix_agentd.conf
-sed -i 's/Hostname=Zabbix server/Hostname=zabbix-agent/' /etc/zabbix/zabbix_agentd.conf
+sed -i 's/Hostname=Zabbix server/Hostname=$y/' /etc/zabbix/zabbix_agentd.conf
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
