@@ -27,9 +27,9 @@ sudo echo "Please enter your zabbix server :"
 read x
 sudo echo "Please enter your hostname :"
 read y
-sudo sed -i 's/ServerActive=127.0.0.1/ServerActive=$x/' /etc/zabbix/zabbix_agentd.conf
-sudo sed -i 's/Server=127.0.0.1/Server=$x/' /etc/zabbix/zabbix_agentd.conf
+sudo sed -i "s/ServerActive=127.0.0.1/ServerActive=$x/" /etc/zabbix/zabbix_agentd.conf
+sudo sed -i "s/Server=127.0.0.1/Server=$x/" /etc/zabbix/zabbix_agentd.conf
 sudo sed -i 's/LogFileSize=0/LogFileSize=1/' /etc/zabbix/zabbix_agentd.conf
-sudo sed -i 's/Hostname=Zabbix server/Hostname=$y/' /etc/zabbix/zabbix_agentd.conf
+sudo sed -i "s/Hostname=Zabbix server/Hostname=$y/" /etc/zabbix/zabbix_agentd.conf
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
