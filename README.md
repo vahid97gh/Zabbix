@@ -16,7 +16,7 @@ This repository contains Bash scripts for automating the installation and config
 
 Ensure you have the following prerequisites before running the scripts:
 
-- [ ] Linux operating system (tested on Ubuntu 18.04)
+- [ ] Linux operating system (tested on Ubuntu 20.04)
 - [ ] Bash shell
 - [ ] Root or sudo access
 
@@ -27,10 +27,51 @@ Ensure you have the following prerequisites before running the scripts:
 1. Clone this repository:
    ```bash
    git clone https://github.com/vahid97gh/Zabbix.git
-   cd zabbix
+   cd Zabbix
    ```
 2. Run the Zabbix Server script:
 ```bash
-./install_zabbix_server.sh
+./zabbix-server.sh
 ```
+### Zabbix Agent
+1. Clone this repository:
+```bash
+git clone https://github.com/vahid97gh/Zabbix.git
+cd Zabbix
+```
+2. Run the Zabbix Agent script:
+```bash
+./zabbix-agent.sh
+```
+### Zabbix Proxy
+1. Clone this repository:
+```bash
+git clone https://github.com/vahid97gh/Zabbix.git
+cd Zabbix
+```
+2. Run the Zabbix Proxy script:
+```bash
+./zabbix-proxy.sh
+```
+### Configuration
+Customize the configuration files as needed. You can find the Zabbix Server, Agent, and Proxy configuration files in the config directory.
 
+1. Zabbix server config file:
+```bash
+/etc/zabbix/zabbix_server.conf
+```
+2. Zabbix Agent config file:
+```bash
+/etc/zabbix/zabbix_agentd.conf
+```
+3. Zabbix Proxy config file:
+```bash
+/etc/zabbix/zabbix_proxy.conf
+```
+### Contributing
+
+Feel free to contribute by opening issues or submitting pull requests. Your feedback and improvements are highly appreciated.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
